@@ -10,8 +10,10 @@ body{
     margin: auto;
     justify-content: center;
     align-items: center;
-    background: whitesmoke;
+    background:#61baca;
     padding: 50px;
+    color: #e7e9f3;
+
 }
 
 .container{
@@ -19,7 +21,7 @@ body{
     max-width: 400px;
     width: 100%;
     margin: auto;
-    background: rgba(0, 0, 0, 0.205);
+    background: #205897;
     padding: 25px 30px;
     border-radius: 5px;
     text-align: center;
@@ -32,24 +34,77 @@ h1{
     text-align: center;
 }
 
-button{
+/* button{
     height: 40px;
     width: 80px;
     border-radius: 5px;
     background-color: transparent;
     margin-top: 100px;
+} */
+
+.nameBtn{
+
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #1AA687;
+    margin-top: 100px;
+    color: #e7e9f3;
+
+
 }
-button:hover{
+
+.secondbtn{
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #1AA687;
+    margin-top: 50px;
+    color: #e7e9f3;
+
+
+}
+.nameBtn:hover{
     cursor: pointer;
-    background-color: green;
+    background-color: #978492;
+    box-shadow:0 0 5px floralwhite, 0 0 10px floralwhite, 0 0 15px floralwhite;
+}
+
+.secondbtn:hover{
+    cursor: pointer;
+    background-color: #978492;
     color: black;
     box-shadow:0 0 5px floralwhite, 0 0 10px floralwhite, 0 0 15px floralwhite;
 }
 
+.nextBtn{
+
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #1AA687;
+    margin-top: 100px;
+    color: #e7e9f3;
+
+}
+
+.nextBtn:hover{
+    cursor: pointer;
+    background-color: #978492;
+    box-shadow:0 0 5px floralwhite, 0 0 10px floralwhite, 0 0 15px floralwhite;
+}
+
+.points{
+    background-color: #4BC3B5;
+    height: 50px;
+    /* width: 110px; */
+    /* box-shadow:0 0 5px floralwhite, 0 0 10px floralwhite, 0 0 15px floralwhite; */
+}
+
 .name{
     padding: 10px 50px;
-    background-color: transparent;
-    margin-top: 100px;
+    background-color:#f5eff3;
+    margin-top: 10px;
 }
 
 p{
