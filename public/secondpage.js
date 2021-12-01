@@ -97,5 +97,5 @@ async function init() {
     });
 
     //Stop the recognition in 5 seconds.
-    setTimeout(() => recognizer.stopListening(), 3000);
+    setTimeout(() => recognizer.stopListening(), 2000);
 }
