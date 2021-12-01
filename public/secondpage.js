@@ -1,8 +1,13 @@
 // more documentation available at
+// https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+
+var message = document.querySelector('.result')
+
+// more documentation available at
     // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/AftHexF4Y/";
+    const URL = "https://teachablemachine.withgoogle.com/models/eTGdOIaIA/";
 
     async function createModel() {
         const checkpointURL = URL + "model.json"; // model topology
@@ -23,10 +28,11 @@
     async function init() {
         const recognizer = await createModel();
         const classLabels = recognizer.wordLabels(); // get class labels
+        console.log('sdfghjk,l'+ classLabels)
         const labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < classLabels.length; i++) {
-            labelContainer.appendChild(document.createElement("div"));
-        }
+        // for (let i = 0; i < classLabels.length; i++) {
+        //     labelContainer.appendChild(document.createElement("div"));
+        // }
 
         // listen() takes two arguments:
         // 1. A callback function that is invoked anytime a word is recognized.
@@ -34,9 +40,32 @@
         recognizer.listen(result => {
             const scores = result.scores; // probability of prediction for each class
             // render the probability scores per class
-            for (let i = 0; i < classLabels.length; i++) {
-                const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
+            // for (let i = 0; i < classLabels.length; i++) {
+            //     const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
+            //     labelContainer.childNodes[i].innerHTML = classPrediction;
+            // }
+
+            let obj = result.scores;
+            let arr = Object.values(obj);
+            let max = Math.max(...arr);
+            console.log('highest function:' + Object.keys(obj).reduce(function (a, b) { return obj[a] > obj[b] ? a : b }));
+            var highestValue = Object.keys(obj).reduce(function (a, b) { return obj[a] > obj[b] ? a : b })
+            const highVal = classLabels[highestValue] + ": " + max.toFixed(2);
+
+            if (highestValue == 1) {
+                message.innerHTML = 'Sorry, please try again.'
+            }
+            else if (highestValue == 0) {
+                message.innerHTML = 'Please speak into the mic';
+            }
+            else if (highestValue == 2) {
+                message.innerHTML = 'Yay, you said ingca correctly. High five'
+            }
+            else if (highestValue == 4) {
+                message.innerHTML = 'Yay, you said umngqusho correctly. Great job 😀'
+            }
+            else if (highestValue == 3) {
+                message.innerHTML = 'Wow, you said ukrakrayo correctly. Congrats :clap:'
             }
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
@@ -45,6 +74,6 @@
             overlapFactor: 0.50 // probably want between 0.5 and 0.75. More info in README
         });
 
-        // Stop the recognition in 5 seconds.
-        // setTimeout(() => recognizer.stopListening(), 5000);
+        //Stop the recognition in 5 seconds.
+        setTimeout(() => recognizer.stopListening(), 2000);
     }
