@@ -41,7 +41,7 @@ var p = document.createElement('p')
 var pOne = document.createElement('p')
 
 p.innerHTML = 'Congrats!';
-pOne.innerHTML = 'You can move to the next level'
+pOne.innerHTML = 'You move to the next word'
 success.appendChild(p)
 success.appendChild(pOne)
 success.appendChild(image)
