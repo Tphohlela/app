@@ -34,3 +34,4 @@ create table exercise(
 insert into exercise (word, level) values ('Umngqusho', 1);
 insert into exercise (word, level) values ('Ingcambu', 2);
 insert into exercise (word, level) values ('Ingca', 3);
+

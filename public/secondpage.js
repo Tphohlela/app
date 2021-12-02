@@ -1,13 +1,11 @@
-// more documentation available at
-// https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
 
-// var message = document.querySelector('.result')
-
-// more documentation available at
-// https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+// // more documentation available at
+// // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+    // the link to your model provided by Teachable Machine export panel
+       
 
 // the link to your model provided by Teachable Machine export panel
-// const URL = "https://teachablemachine.withgoogle.com/models/eTGdOIaIA/";
+const URL = "https://teachablemachine.withgoogle.com/models/AftHexF4Y/";
 
 // async function createModel() {
 //     const checkpointURL = URL + "model.json"; // model topology
@@ -99,3 +97,6 @@
 //     //Stop the recognition in 5 seconds.
 //     // setTimeout(() => recognizer.stopListening(), 3000);
 // }
+    //Stop the recognition in 5 seconds.
+    setTimeout(() => recognizer.stopListening(), 2000);
+}
