@@ -10,20 +10,23 @@ body{
     margin: auto;
     justify-content: center;
     align-items: center;
-    background:white;
+    background-image: url('color.jpg');
+    background-color: white;
     padding: 50px;
     color:black;
 
 }
 
 .container{
-    height: 550px;
-    max-width: 450px;
+    height: 620px;
+    max-width: 530px;
     width: 100%;
     margin: auto;
     padding: 25px 30px;
     border-radius: 5px;
     text-align: center;
+    background-color: white;
+
 }
 
 h1{
@@ -82,7 +85,7 @@ h1{
     width: 80px;
     border-radius: 5px;
     background-color: #500938;
-    margin-top: 100px;
+    margin-top: 50px;
     color: #e7e9f3;
 
 }

@@ -27,6 +27,13 @@ async function createModel() {
 var counter = 1;
 var words = ['Background Noise', 'Intloko', 'intlama', 'uhambo'];
 var level = 'Intloko';
+
+var instruct = document.querySelector('.instruction');
+
+// setTimeout(function () {
+//     instruct.innerHTML = " "
+
+// },5000)
 var localStorageCounter = localStorage.getItem('counter');
 
 
@@ -80,6 +87,7 @@ async function init() {
         // console.log(scores)
 
         function getHighest(classLabels, result) {
+            var error = new Audio('beep-02.mp3')
             console.log(classLabels);
 
             // Please say the word is holder for the background sound
@@ -95,6 +103,7 @@ async function init() {
                 labelContainer.childNodes[3].innerHTML = " "
 
                 labelContainer.childNodes[0].innerHTML = "Please say the word on the screen";
+                // error.play()
 
             } else if (result[1] > result[0] && result[1] > result[2] && result[1] > result[3]) {
                 word.innerHTML = level
@@ -112,6 +121,7 @@ async function init() {
 
             } else if (result[2] > result[1] && result[2] > result[0] && result[2] > result[3]) {
                 word.innerHTML = level;
+                // var words = ['Background Noise', 'Intloko', 'intlama', 'uhambo'];
 
                 if (level == 'intlama') {
                     localStorage.setItem('counter', counter + 1);
@@ -123,13 +133,13 @@ async function init() {
 
                 labelContainer.childNodes[2].innerHTML = "Sounds like " + " " + classLabels[2] + " ";
 
-            } else {
+            } else if(result[3] > result[2] && result[3] > result[0] && result[3] > result[1]) {
                 word.innerHTML = level;
 
                 if (level == 'uhambo') {
                     localStorage.setItem('counter', counter + 1);
                     document.location.reload()
-                    document.location.replace("./thirdpage.html")
+                    document.location.replace("./level1.html")
 
                 }
                 labelContainer.childNodes[1].innerHTML = " "
@@ -137,9 +147,12 @@ async function init() {
                 labelContainer.childNodes[0].innerHTML = " "
 
                 labelContainer.childNodes[3].innerHTML = "Sounds like " + " " + classLabels[3] + " "
+               
             }
-
-
+            // else{
+            //     word.innerHTML = level;
+            //     error.play()
+            // }
         }
 
         getHighest(classLabels, result.scores)

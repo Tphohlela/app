@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div style="display: flex; justify-content: space-between;">
+
+            <div style="font-size: small;">
+                <div style="display: flex;">
+    
+                    <h4>iSAND</h4>
+                    <h4 style="color: brown;">I</h4>
+                    <h4>VOICE</h4>
+                </div>
+    
+                <div style="display: flex;">
+    
+                    <h4>iSAND</h4>
+                    <h4 style="color: brown;">I</h4>
+                    <h4>VOICE</h4>
+                </div>
+    
+                <div style="display: flex;">
+    
+                    <h4>iSAND</h4>
+                    <h4 style="color: brown;">I</h4>
+                    <h4>VOICE</h4>
+                </div>
+    
+                <div style="display: flex;">
+    
+                    <h4>iSAND</h4>
+                    <h4 style="color: brown;">I</h4>
+                    <h4>VOICE</h4>
+                </div>
+            </div>
+            <!--Name of the app-->
+            <div><h3 class="player"></h3></div>
+        </div>
+        
+        <h2 style="font-size: 30px; color: #500938; font-weight: bold;">Level 3</h2>
+        <h4 class="instruction" style="padding-top: 20px; font-size: 19px; color: rgb(42, 46, 42);">Press start to view and pronounce a word</h4>
+
+        <!--words  -->
+        <div style="padding-top: 20px; font-size: 30px; font-weight: bold; color: rgb(8, 21, 58);" id="word-container"></div>
+
+        <button type="button" class="nextBtn" onclick="init()">Start</button>
+
+        <div style="padding-top: 20px; font-weight: bold; font-size: 20px;" id="label-container"></div>
+
+        <!--  congrats Message-->
+        <div class="message" style="font-family:Arial; font-size: 20px; font-weight: bold;">
+            
+        </div>
+    
+        <!-- <a href="/public/thirdpage.html"><button class="nextBtn" type="submit">Next</button></a> -->
+        
+        <div id="label-container"></div>
+    
+    </div>
+    
+    <script src="player.js"></script>
+
+    <script type="text/javascript" src="model3.js">
+    
+    </script
+</body>
+</html>
