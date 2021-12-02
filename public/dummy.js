@@ -129,7 +129,7 @@ async function init() {
                 if (level == 'uhambo') {
                     localStorage.setItem('counter', counter + 1);
                     document.location.reload()
-                    document.location.replace("/public/thirdpage.html")
+                    document.location.replace("./thirdpage.html")
 
                 }
                 labelContainer.childNodes[1].innerHTML = " "
