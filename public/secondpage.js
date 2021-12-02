@@ -1,13 +1,18 @@
 // more documentation available at
 // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
 
-var message = document.querySelector('.result')
+// <<<<<<< HEAD
+// var message = document.querySelector('.result')
 
-// more documentation available at
-// https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+// // more documentation available at
+// // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
+// =======
+    // the link to your model provided by Teachable Machine export panel
+       
+// >>>>>>> 32de845f81db7ed59836aecebdef1482225f4ba0
 
 // the link to your model provided by Teachable Machine export panel
-const URL = "https://teachablemachine.withgoogle.com/models/eTGdOIaIA/";
+const URL = "https://teachablemachine.withgoogle.com/models/AftHexF4Y/";
 
 async function createModel() {
     const checkpointURL = URL + "model.json"; // model topology
