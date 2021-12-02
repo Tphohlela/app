@@ -127,7 +127,7 @@ setTimeout(function () {
                     if (level == 'Umoya') {
                         localStorage.setItem('counter', counter + 1);
                         document.location.reload()
-                        document.location.replace("/public/endGame.html")
+                        document.location.replace("./endGame.html")
     
                     }
                     labelContainer.childNodes[1].innerHTML = " "

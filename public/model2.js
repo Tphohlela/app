@@ -138,7 +138,7 @@ setTimeout(function () {
                         localStorage.setItem('counter', counter + 1);
                         document.location.reload()
                         // replace with second model
-                        document.location.replace("/public/level2.html")
+                        document.location.replace("./level2.html")
     
                     }
                     labelContainer.childNodes[1].innerHTML = " "
