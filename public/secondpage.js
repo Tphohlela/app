@@ -99,4 +99,4 @@ const URL = "https://teachablemachine.withgoogle.com/models/AftHexF4Y/";
 // }
     //Stop the recognition in 5 seconds.
     setTimeout(() => recognizer.stopListening(), 2000);
-}
+
