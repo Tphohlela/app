@@ -10,18 +10,17 @@ body{
     margin: auto;
     justify-content: center;
     align-items: center;
-    background:#61baca;
+    background:white;
     padding: 50px;
-    color: #e7e9f3;
+    color:black;
 
 }
 
 .container{
     height: 550px;
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
     margin: auto;
-    background: #205897;
     padding: 25px 30px;
     border-radius: 5px;
     text-align: center;
@@ -47,7 +46,7 @@ h1{
     height: 40px;
     width: 80px;
     border-radius: 5px;
-    background-color: #1AA687;
+    background-color: #500938;
     margin-top: 100px;
     color: #e7e9f3;
 
@@ -58,7 +57,7 @@ h1{
     height: 40px;
     width: 80px;
     border-radius: 5px;
-    background-color: #1AA687;
+    background-color: #500938;
     margin-top: 50px;
     color: #e7e9f3;
 
@@ -82,7 +81,7 @@ h1{
     height: 40px;
     width: 80px;
     border-radius: 5px;
-    background-color: #1AA687;
+    background-color: #500938;
     margin-top: 100px;
     color: #e7e9f3;
 
@@ -95,14 +94,14 @@ h1{
 }
 
 .points{
-    background-color: #4BC3B5;
+    /* background-color: #4BC3B5; */
     height: 50px;
     /* width: 110px; */
     /* box-shadow:0 0 5px floralwhite, 0 0 10px floralwhite, 0 0 15px floralwhite; */
 }
 
 .name{
-    padding: 10px 50px;
+    padding: 10px 30px;
     background-color:#f5eff3;
     margin-top: 10px;
 }
@@ -110,4 +109,61 @@ h1{
 p{
     margin-top: 30px;
     font-family: fantasy;
+}
+
+img{
+    padding-top: 20px;
+    border-radius: 30px;
+    height: 150px;
+    width: 140px;
+}
+
+ .container::after{
+    /* content: ""; */
+    position: absolute;
+    left: 3.5%;
+    top: 3.5%;
+    background: white;
+    background-size: 400%;
+    width: 93%;
+    height: 93%;
+    /* z-index: -1;
+    animation: animate 20s linear infinite; */
+} 
+
+    /* @keyframes animate {
+        0%{
+            background-position: 0 0;
+        
+    }
+    50%{
+        background-position: 400% 0;
+
+    }
+    100%{
+        background-position: 0 0;
+
+    }
+} */
+
+
+/* 3D effect */
+.container{
+    filter: blur(0.4px);
+    box-shadow:
+
+    /* bottom */
+    0px 20px 20px rgba(129, 28, 104, 0.2),
+    0px 5px 10px rgba(0,0,0,0.2),
+
+    /* long bottom */
+    0px 70px 50px rgba(0,0,0,0.4),
+    
+
+    /* right */
+    30px 50px 50px rgba(129, 28, 104, 0.2),
+   
+
+    /* left  */
+    -30px 50px 50px rgba(129, 28, 104, 0.2);
 }
