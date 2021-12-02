@@ -4,7 +4,10 @@
 
 // the link to your model provided by Teachable Machine export panel
 const URL = "https://teachablemachine.withgoogle.com/models/9onw5K6mH/";
+
+// display 
 var word = document.getElementById("word-container");
+
 async function createModel() {
     const checkpointURL = URL + "model.json"; // model topology
     const metadataURL = URL + "metadata.json"; // model metadata
