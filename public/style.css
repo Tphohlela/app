@@ -170,3 +170,22 @@ img{
     /* left  */
     -30px 50px 50px rgba(129, 28, 104, 0.2);
 }
+
+.winning{
+    animation: wiggle 3s;
+}
+
+@keyframes wiggle{
+    0%{transform: translate(3px,3px) rotate(0deg);}
+    10%{transform: translate(3px,-3px) rotate(1deg);}
+    20%{transform: translate(-3px,4px) rotate(-1deg);}
+    30%{transform: translate(-5px,3px) rotate(0deg);}
+    40%{transform: translate(5px,3px) rotate(-1deg);}
+    50%{transform: translate(-3px,3px) rotate(1deg);}
+    60%{transform: translate(3px,-3px) rotate(0deg);}
+    70%{transform: translate(3px,4px) rotate(-1deg);}
+    80%{transform: translate(-3px,3px) rotate(1deg);}
+    90%{transform: translate(3px,-3px) rotate(0deg);}
+    100%{transform: translate(3px,4px) rotate(-1deg);}
+    
+}
